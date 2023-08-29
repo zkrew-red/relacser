@@ -2,8 +2,6 @@
 import Header from '@/components/Header.astro'
 import Emoji from 'astro-emoji'
 import Layout from '../layouts/Layout.astro'
-
-const base = import.meta.env.BASE_URL
 ---
 
 <Layout title="reScaler - Quick SVG Icon Resizer">
@@ -37,8 +35,8 @@ const base = import.meta.env.BASE_URL
 			and build with <a href="http://astro.build" target="_blank">Astro</a>
 		</p>
 	</main>
-	<script src=`${base + 'assets/svg_todataurl.js'}`></script>
-	<script src={base + 'assets/script.js'}></script>
+	<script is:inline src='/js/svg_todataurl.js'></script>
+	<script is:inline src='/js/script.js'}></script>
 </Layout>
 
 <style >
