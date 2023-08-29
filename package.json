@@ -1,0 +1,32 @@
+{
+	"name": "@zkrew-red/relacser",
+	"type": "module",
+	"version": "1.0.0",
+	"private": true,
+	"scripts": {
+		"astro": "astro",
+		"build": "tsc --noEmit && astro build",
+		"check": "prettier:check",
+		"dev": "astro dev",
+		"format": "prettier --cache --write --plugin-search-dir=. .",
+		"prettier:check": "prettier --cache --check --plugin-search-dir=. .",
+		"preview": "astro preview",
+		"start": "astro dev"
+	},
+	"devDependencies": {
+		"@astropub/icons": "^0.2.0",
+		"astro": "^2.10.15",
+		"astro-compress": "^2.0.14",
+		"astro-compressor": "^0.4.0",
+		"astro-emoji": "^1.2.0",
+		"autoprefixer": "^10.4.15",
+		"is-svg": "^5.0.0",
+		"mini-svg-data-uri": "^1.4.4",
+		"postcss": "^8.4.29",
+		"postcss-html": "^1.5.0",
+		"prettier": "^3.0.3",
+		"prettier-plugin-astro": "^0.12.0",
+		"svgo": "^3.0.2",
+		"typescript": "^5.2.2"
+	}
+}
