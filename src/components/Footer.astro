@@ -1,14 +1,23 @@
 ---
 import Emoji from 'astro-emoji'
+
+const url = Astro.site
 ---
 
 <footer>
-	Crafted with
-	{' '}
-	<Emoji symbol="❤️" label="love" />
-	{' '}
-	in Cologne by <a href="http://zkrew.red" target="_blank"><span>RDWZ</span></a>
-	and build with <a href="http://astro.build" target="_blank">Astro</a>
+	<p>
+		Crafted with
+		{' '}
+		<Emoji symbol="❤️" label="love" />
+		{' '}
+		in Cologne by <a href="http://zkrew.red" target="_blank"><span>RDWZ</span></a>
+		&middot; build with <a href="http://astro.build" target="_blank">Astro</a>
+		&middot; View <a href="https://github.com/zkrew-red/relacser" target="_blank">Source</a>
+		&middot; Share <a href={'https://twitter.com/intent/tweet?url=' +
+				url +
+				'&hashtags=rescaler/svg/iconresizer/svgtopng&related=webkul&text=reScaler%20-%20Quick%20SVG%20Icon%20Resizer%20%40webkul'}
+			target="_blank">Tweet</a>
+	</p>
 </footer>
 
 <style>
