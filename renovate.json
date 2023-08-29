@@ -1,4 +1,13 @@
 {
-	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
-	"extends": ["github>redwerkz/.github"]
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>renovatebot/.github"],
+  "semanticCommitScope": "deps",
+  "automergeType": "pr",
+  "forkProcessing": "enabled",
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor"],
+      "dependencyDashboardApproval": true
+    }
+  ]
 }
