@@ -1,0 +1,35 @@
+---
+import Emoji from 'astro-emoji'
+---
+
+<footer>
+	Crafted with
+	{' '}
+	<Emoji symbol="❤️" label="love" />
+	{' '}
+	in Cologne by <a href="http://zkrew.red" target="_blank"><span>RDWZ</span></a>
+	and build with <a href="http://astro.build" target="_blank">Astro</a>
+</footer>
+
+<style>
+	footer {
+		color: white;
+		position: absolute;
+		bottom: 1rem;
+		height: 2.5rem;
+	}
+	footer a:link, footer a:visited {
+		color: #2bc7ba;
+		text-decoration: none;
+		border-bottom: dashed 1px #2bc7ba;
+	}
+
+	footer a:hover {
+		background: white;
+		border-bottom: none;
+	}
+
+	footer span {
+		color: #f26183;
+	}
+</style>
