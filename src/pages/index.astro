@@ -1,12 +1,13 @@
 ---
+import { Site } from '../config'
 import Header from '@/components/Header.astro'
-import Emoji from 'astro-emoji'
+import Footer from '@/components/Footer.astro'
 import Layout from '../layouts/Layout.astro'
 ---
 
-<Layout title="reScaler - Quick SVG Icon Resizer">
-	<Header />
+<Layout title={Site.title}>
 	<main>
+		<Header />
 		<!--File Upload-->
 		<div class="btn-wrapper">
 			<label class="btn" for="file_upload">Upload SVG</label>
@@ -19,41 +20,24 @@ import Layout from '../layouts/Layout.astro'
 		<!--//Uploaded SVG Preview-->
 
 		<form id="svg_form">
-			<input type="number" id="resize_value" required placeholder="Enter Resize Value" />
+			<input type="number" id="resize_value" required placeholder="150" />
 			<button type="button" onclick="playGround();exportResizedSvg();">Generate</button>
 		</form>
 		<div class="download-wrapper" id="download_wrapper">
 			<a href="data:" id="data" download="svg" class="download-png" target="_blank"> Download PNG</a>
 		</div>
 		<img alt="" src="" id="fromcanvas" />
-		<p class="credits">
-			Crafted with
-			{' '}
-			<Emoji symbol="❤️" label="love" />
-			{' '}
-			by <a href="http://zkrew.red" target="_blank"><span>RedWerkz</span></a>
-			and build with <a href="http://astro.build" target="_blank">Astro</a>
-		</p>
+		<Footer />
 	</main>
 	<script is:inline src='/js/svg_todataurl.js'></script>
 	<script is:inline src='/js/script.js'}></script>
 </Layout>
 
-<style >
-	h1,
-	h2 {
-		text-align: center;
-		color: hsl(0, 0%, 100%);
-		font-family: 'Roboto Mono', monospace;
-	}
-
-	h1 {
-		font-size: 3rem;
-		margin: 20px 0px 0px 0px;
-	}
-
-	h2 {
-		margin: 10px;
+<style>
+	main {
+		display: grid;
+		place-items: center;
+		justify-content: center;
 	}
 
 	[astro-icon] {
@@ -61,11 +45,6 @@ import Layout from '../layouts/Layout.astro'
 		position: relative;
 		top: 0.15em;
 		width: 1rem;
-	}
-
-	div.preview svg {
-		display: block;
-		margin: 30px auto;
 	}
 
 	svg:nth-of-type(1) {
@@ -181,46 +160,5 @@ import Layout from '../layouts/Layout.astro'
 
 	#fromcanvas {
 		display: none;
-	}
-
-	p.credits {
-		margin-top: 50px;
-		color: rgba(255, 255, 255, 0.8);
-		text-align: center;
-	}
-
-	p.credits a {
-		color: #2bc7ba;
-		text-decoration: none;
-		border-bottom: dashed 1px #2bc7ba;
-	}
-
-	p.credits a:hover {
-		border-bottom: none;
-	}
-
-	p.credits span {
-		color: #f26183;
-	}
-
-	p.promote {
-		color: rgba(255, 255, 255, 0.8);
-		text-align: center;
-	}
-
-	p.promote a {
-		color: #2bc7ba;
-		text-decoration: none;
-		border-bottom: dashed 1px #2bc7ba;
-		margin: 5px 10px;
-		display: inline-block;
-	}
-
-	p.promote a:hover {
-		border-bottom: none;
-	}
-
-	p.promote span {
-		color: #f26183;
 	}
 </style>

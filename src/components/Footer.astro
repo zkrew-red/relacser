@@ -10,13 +10,13 @@ const url = Astro.site
 		{' '}
 		<Emoji symbol="❤️" label="love" />
 		{' '}
-		in Cologne by <a href="http://zkrew.red" target="_blank"><span>RDWZ</span></a>
-		&middot; build with <a href="http://astro.build" target="_blank">Astro</a>
-		&middot; View <a href="https://github.com/zkrew-red/relacser" target="_blank">Source</a>
-		&middot; Share <a href={'https://twitter.com/intent/tweet?url=' +
+		in Cologne by <a href="http://zkrew.red" target="_blank">RDWZ</a><br />
+		<a href="http://astro.build" target="_blank">Build with Astro</a>
+		&middot; <a href="https://github.com/zkrew-red/relacser" target="_blank">View Source</a>
+		&middot; <a href={'https://twitter.com/intent/tweet?url=' +
 				url +
 				'&hashtags=rescaler/svg/iconresizer/svgtopng&related=webkul&text=reScaler%20-%20Quick%20SVG%20Icon%20Resizer%20%40webkul'}
-			target="_blank">Tweet</a>
+			target="_blank">Share Tweet</a>
 	</p>
 </footer>
 
@@ -24,21 +24,21 @@ const url = Astro.site
 	footer {
 		color: white;
 		position: absolute;
-		bottom: 1rem;
-		height: 2.5rem;
+		bottom: 1.5rem;
+		width: 100%;
+		text-align: center;
 	}
-	footer a:link, footer a:visited {
+
+	a:hover {
+		color: white !important;
+		border-radius: 1rem;
+		background: #2bc7ba;
+	}
+
+	a:link, footer a:visited {
 		color: #2bc7ba;
-		text-decoration: none;
-		border-bottom: dashed 1px #2bc7ba;
-	}
-
-	footer a:hover {
-		background: white;
 		border-bottom: none;
-	}
-
-	footer span {
-		color: #f26183;
+		padding-inline: .5rem;
+		text-decoration: none;
 	}
 </style>
