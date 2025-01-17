@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -46,7 +46,7 @@ devDependencies:
     version: 1.5.0
   postcss-jit-props:
     specifier: ^1.0.13
-    version: 1.0.13(postcss@8.4.29)
+    version: 1.0.14(postcss@8.4.29)
   prettier:
     specifier: ^3.0.3
     version: 3.0.3
@@ -3094,8 +3094,8 @@ packages:
       postcss-safe-parser: 6.0.0(postcss@8.4.29)
     dev: true
 
-  /postcss-jit-props@1.0.13(postcss@8.4.29):
-    resolution: {integrity: sha512-UqJdixZQyf1//GEs0bUeJ30UuhmsD5OojTIiImElOH2cXbw6QAcWHpXuo+dl9AF/uz+x0AnCzhrB+SXUtYfSRw==}
+  /postcss-jit-props@1.0.14(postcss@8.4.29):
+    resolution: {integrity: sha512-GimU4wen29Qr0DbDaAuWrj4NcErYR5x1rxcEFuPVAwF2HEZALydA8tpTMWEyThK7T2bwFTMFMA4G70pL55xUbw==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       postcss: ^8.2.8
